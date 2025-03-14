@@ -29,7 +29,7 @@
           <%= render "sections/fields", f: section_f %>
         <% end %>
       </div>
-      <%= link_to "Add section", new_post_section_path(post), data: { turbo_stream: true, disable_with: "Loading" } %>
+      <%= link_to "Add section", new_section_path, data: { turbo_stream: true, disable_with: "Loading" } %>
     </div>
 
     <%= f.submit class: "btn btn-primary", disabled: true, data: { form_target: "submitButton", turbo: false } %>

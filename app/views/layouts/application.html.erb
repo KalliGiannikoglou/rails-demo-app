@@ -25,6 +25,9 @@
     <% if notice %>
       <div class="alert alert-info"><%= notice %></div>
     <% end %>
+     <% if alert %>
+      <div class="alert alert-danger"><%= alert %></div>
+    <% end %>
     <%= render "shared/nav" %>
     <section>
         <%= yield %>

@@ -1,6 +1,3 @@
 class SectionsController < ApplicationController
-  def new
-    @post = Post.find(params[:id])
-    @section = @post.sections.build
-  end
+  def new; end
 end

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   resources :comments, only: [:create, :destroy, :show]
 
-  get '/posts/:id/sections/new', to: 'sections#new', as: :new_post_section
+  get '/sections/new', to: 'sections#new', as: :new_section
 
   get "/posts", to: "posts#index"
   get "/list", to: "posts#list", as: :list_posts

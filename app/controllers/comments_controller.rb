@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
     @comment.user = current_user
     @commentable = @comment.commentable
     if @commentable.is_a?(Post) && @commentable.draft?
-      return redirect_to root_path, notice: "Something went wrong"
+      return redirect_to root_path, alert: "Cannot comment on draft posts"
     end
     if @comment.save
       # redirect_to post_path(@comment.commentable), notice: "Comment created successfully"
